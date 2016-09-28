@@ -5,6 +5,7 @@ import App from './containers/App'
 import Admin from './components/Admin'
 import Genre from './components/Genre'
 import Home from './components/Home'
+import NotFound from './components/NotFound'
 
 import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 
@@ -15,6 +16,7 @@ render(
       <Route path='admin' component={Admin} />
       <Route path='genre' component={Genre} />
     </Route>
+    <Route path='*' component={NotFound} />
   </Router>,
   document.getElementById('root')
 )
